@@ -31,3 +31,5 @@ pending1-selector	BestEffort
 webapp-configured-8568cbdbf-4tk8m	BestEffort
 
 --- Task 7: Static Pod Proof ---
+static-nginx-minikube               1/1     Running   0             2m8s   10.244.0.86   minikube   <none>           <none>
+
