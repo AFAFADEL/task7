@@ -1,0 +1,16 @@
+u1@ubuntu-desktop1:~/task_7$ minikube ssh
+docker@minikube:~$ sudo bash -c 'cat > /etc/kubernetes/manifests/static-nginx.yaml <<EOF
+apiVersion: v1
+kind: Pod
+metadata:
+  name: static-nginx
+spec:
+  containers:
+  - name: nginx
+    image: nginx:latest
+EOF'
+docker@minikube:~$ exit
+logout
+u1@ubuntu-desktop1:~/task_7$ kubectl get pods -o wide | grep "\-minikube"
+static-nginx-minikube               1/1     Running   0             19s   10.244.0.86   minikube   <none>           <none>
+u1@ubuntu-desktop1:~/task_7$
